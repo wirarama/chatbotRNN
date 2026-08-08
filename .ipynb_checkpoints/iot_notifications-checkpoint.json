@@ -1,0 +1,1502 @@
+[
+  {
+    "timestamp": "2024-02-27 19:30",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.1006,
+    "cluster_id": 7,
+    "readings": {
+      "temperature": 24.17,
+      "pressure": 1018.3,
+      "humidity": 76.02,
+      "light": 129.38
+    },
+    "cluster_name": "NORMAL_DAY_2"
+  },
+  {
+    "timestamp": "2024-02-27 20:00",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.1115,
+    "cluster_id": 7,
+    "readings": {
+      "temperature": 24.01,
+      "pressure": 1017.94,
+      "humidity": 76.2,
+      "light": 102.74
+    },
+    "cluster_name": "NORMAL_DAY_2"
+  },
+  {
+    "timestamp": "2024-02-27 20:30",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.1278,
+    "cluster_id": 7,
+    "readings": {
+      "temperature": 23.23,
+      "pressure": 1017.67,
+      "humidity": 80.78,
+      "light": 49.43
+    },
+    "cluster_name": "NORMAL_DAY_2"
+  },
+  {
+    "timestamp": "2024-02-27 21:00",
+    "notification": "CRIT_PRESSURE",
+    "severity": "\ud83d\udea8 CRITICAL",
+    "message": "CRITICAL: Atmospheric pressure has dropped sharply below the 2.5\u03c3 lower threshold. Possible weather event or sensor fault. Immediate inspection required.",
+    "anomaly_score": 0.1528,
+    "cluster_id": 7,
+    "readings": {
+      "temperature": 21.93,
+      "pressure": 1017.83,
+      "humidity": 80.9,
+      "light": 6.93
+    },
+    "cluster_name": "NORMAL_DAY_2"
+  },
+  {
+    "timestamp": "2024-02-27 21:30",
+    "notification": "WATCH_BORDERLINE",
+    "severity": "\ud83d\udc41\ufe0f  WATCH",
+    "message": "Sensor values are approaching threshold limits. Increased monitoring recommended over the next cycle.",
+    "anomaly_score": 0.1834,
+    "cluster_id": 2,
+    "readings": {
+      "temperature": 21.25,
+      "pressure": 1018.1,
+      "humidity": 83.97,
+      "light": 5.98
+    },
+    "cluster_name": "BORDERLINE"
+  },
+  {
+    "timestamp": "2024-02-27 22:00",
+    "notification": "WATCH_BORDERLINE",
+    "severity": "\ud83d\udc41\ufe0f  WATCH",
+    "message": "Sensor values are approaching threshold limits. Increased monitoring recommended over the next cycle.",
+    "anomaly_score": 0.2075,
+    "cluster_id": 2,
+    "readings": {
+      "temperature": 20.77,
+      "pressure": 1018.18,
+      "humidity": 87.51,
+      "light": 6.94
+    },
+    "cluster_name": "BORDERLINE"
+  },
+  {
+    "timestamp": "2024-02-27 22:30",
+    "notification": "WATCH_BORDERLINE",
+    "severity": "\ud83d\udc41\ufe0f  WATCH",
+    "message": "Sensor values are approaching threshold limits. Increased monitoring recommended over the next cycle.",
+    "anomaly_score": 0.2374,
+    "cluster_id": 2,
+    "readings": {
+      "temperature": 20.17,
+      "pressure": 1018.21,
+      "humidity": 88.31,
+      "light": 5.63
+    },
+    "cluster_name": "BORDERLINE"
+  },
+  {
+    "timestamp": "2024-02-27 23:00",
+    "notification": "WARN_HUMIDITY",
+    "severity": "\u26a0\ufe0f  WARNING",
+    "message": "Relative humidity is elevated above safe operating levels. Inspect for water ingress, condensation, or seal failure.",
+    "anomaly_score": 0.2146,
+    "cluster_id": 2,
+    "readings": {
+      "temperature": 20.04,
+      "pressure": 1018.45,
+      "humidity": 86.95,
+      "light": 2.83
+    },
+    "cluster_name": "BORDERLINE"
+  },
+  {
+    "timestamp": "2024-02-27 23:30",
+    "notification": "WARN_HUMIDITY",
+    "severity": "\u26a0\ufe0f  WARNING",
+    "message": "Relative humidity is elevated above safe operating levels. Inspect for water ingress, condensation, or seal failure.",
+    "anomaly_score": 0.151,
+    "cluster_id": 2,
+    "readings": {
+      "temperature": 18.82,
+      "pressure": 1018.46,
+      "humidity": 100.0,
+      "light": 5.79
+    },
+    "cluster_name": "BORDERLINE"
+  },
+  {
+    "timestamp": "2024-02-28 00:00",
+    "notification": "WATCH_BORDERLINE",
+    "severity": "\ud83d\udc41\ufe0f  WATCH",
+    "message": "Sensor values are approaching threshold limits. Increased monitoring recommended over the next cycle.",
+    "anomaly_score": 0.0915,
+    "cluster_id": 2,
+    "readings": {
+      "temperature": 19.15,
+      "pressure": 1018.49,
+      "humidity": 90.1,
+      "light": 2.31
+    },
+    "cluster_name": "BORDERLINE"
+  },
+  {
+    "timestamp": "2024-02-28 00:30",
+    "notification": "WATCH_BORDERLINE",
+    "severity": "\ud83d\udc41\ufe0f  WATCH",
+    "message": "Sensor values are approaching threshold limits. Increased monitoring recommended over the next cycle.",
+    "anomaly_score": 0.0759,
+    "cluster_id": 2,
+    "readings": {
+      "temperature": 26.42,
+      "pressure": 1017.77,
+      "humidity": 69.19,
+      "light": 4.63
+    },
+    "cluster_name": "BORDERLINE"
+  },
+  {
+    "timestamp": "2024-02-28 01:00",
+    "notification": "WATCH_BORDERLINE",
+    "severity": "\ud83d\udc41\ufe0f  WATCH",
+    "message": "Sensor values are approaching threshold limits. Increased monitoring recommended over the next cycle.",
+    "anomaly_score": 0.0765,
+    "cluster_id": 2,
+    "readings": {
+      "temperature": 26.32,
+      "pressure": 1018.54,
+      "humidity": 68.01,
+      "light": 7.69
+    },
+    "cluster_name": "BORDERLINE"
+  },
+  {
+    "timestamp": "2024-02-28 01:30",
+    "notification": "WATCH_BORDERLINE",
+    "severity": "\ud83d\udc41\ufe0f  WATCH",
+    "message": "Sensor values are approaching threshold limits. Increased monitoring recommended over the next cycle.",
+    "anomaly_score": 0.0815,
+    "cluster_id": 2,
+    "readings": {
+      "temperature": 27.49,
+      "pressure": 1018.35,
+      "humidity": 68.96,
+      "light": 5.68
+    },
+    "cluster_name": "BORDERLINE"
+  },
+  {
+    "timestamp": "2024-02-28 02:00",
+    "notification": "WATCH_BORDERLINE",
+    "severity": "\ud83d\udc41\ufe0f  WATCH",
+    "message": "Sensor values are approaching threshold limits. Increased monitoring recommended over the next cycle.",
+    "anomaly_score": 0.0897,
+    "cluster_id": 2,
+    "readings": {
+      "temperature": 26.26,
+      "pressure": 1018.33,
+      "humidity": 69.89,
+      "light": 4.18
+    },
+    "cluster_name": "BORDERLINE"
+  },
+  {
+    "timestamp": "2024-02-28 02:30",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.1033,
+    "cluster_id": 3,
+    "readings": {
+      "temperature": 26.29,
+      "pressure": 1017.28,
+      "humidity": 68.44,
+      "light": 7.23
+    },
+    "cluster_name": "NORMAL_NIGHT_1"
+  },
+  {
+    "timestamp": "2024-02-28 03:00",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.1252,
+    "cluster_id": 3,
+    "readings": {
+      "temperature": 26.7,
+      "pressure": 1017.95,
+      "humidity": 70.98,
+      "light": 8.61
+    },
+    "cluster_name": "NORMAL_NIGHT_1"
+  },
+  {
+    "timestamp": "2024-02-28 03:30",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.1559,
+    "cluster_id": 3,
+    "readings": {
+      "temperature": 27.57,
+      "pressure": 1017.68,
+      "humidity": 67.09,
+      "light": 9.72
+    },
+    "cluster_name": "NORMAL_NIGHT_1"
+  },
+  {
+    "timestamp": "2024-02-28 04:00",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.187,
+    "cluster_id": 3,
+    "readings": {
+      "temperature": 28.04,
+      "pressure": 1017.99,
+      "humidity": 68.09,
+      "light": 6.93
+    },
+    "cluster_name": "NORMAL_NIGHT_1"
+  },
+  {
+    "timestamp": "2024-02-28 04:30",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.2225,
+    "cluster_id": 3,
+    "readings": {
+      "temperature": 26.85,
+      "pressure": 1017.87,
+      "humidity": 71.34,
+      "light": 5.67
+    },
+    "cluster_name": "NORMAL_NIGHT_1"
+  },
+  {
+    "timestamp": "2024-02-28 05:00",
+    "notification": "CRIT_MULTI",
+    "severity": "\ud83d\udea8 CRITICAL",
+    "message": "CRITICAL: Multiple sensor variables are simultaneously outside normal bounds. Possible compound environmental fault or sensor array failure. Immediate intervention required.",
+    "anomaly_score": 0.245,
+    "cluster_id": 0,
+    "readings": {
+      "temperature": 26.32,
+      "pressure": 1017.77,
+      "humidity": 70.99,
+      "light": 6.02
+    },
+    "cluster_name": "NORMAL_NIGHT"
+  },
+  {
+    "timestamp": "2024-02-28 05:30",
+    "notification": "CRIT_MULTI",
+    "severity": "\ud83d\udea8 CRITICAL",
+    "message": "CRITICAL: Multiple sensor variables are simultaneously outside normal bounds. Possible compound environmental fault or sensor array failure. Immediate intervention required.",
+    "anomaly_score": 0.2352,
+    "cluster_id": 0,
+    "readings": {
+      "temperature": 27.04,
+      "pressure": 1018.11,
+      "humidity": 69.46,
+      "light": 5.36
+    },
+    "cluster_name": "NORMAL_NIGHT"
+  },
+  {
+    "timestamp": "2024-02-28 06:00",
+    "notification": "CRIT_MULTI",
+    "severity": "\ud83d\udea8 CRITICAL",
+    "message": "CRITICAL: Multiple sensor variables are simultaneously outside normal bounds. Possible compound environmental fault or sensor array failure. Immediate intervention required.",
+    "anomaly_score": 0.2,
+    "cluster_id": 0,
+    "readings": {
+      "temperature": 31.23,
+      "pressure": 1017.66,
+      "humidity": 82.45,
+      "light": 4.22
+    },
+    "cluster_name": "NORMAL_NIGHT"
+  },
+  {
+    "timestamp": "2024-02-28 06:30",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.1526,
+    "cluster_id": 0,
+    "readings": {
+      "temperature": 26.68,
+      "pressure": 1017.44,
+      "humidity": 71.51,
+      "light": 82.18
+    },
+    "cluster_name": "NORMAL_NIGHT"
+  },
+  {
+    "timestamp": "2024-02-28 07:00",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.0904,
+    "cluster_id": 0,
+    "readings": {
+      "temperature": 28.37,
+      "pressure": 1017.2,
+      "humidity": 67.15,
+      "light": 87.23
+    },
+    "cluster_name": "NORMAL_NIGHT"
+  },
+  {
+    "timestamp": "2024-02-28 07:30",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.0681,
+    "cluster_id": 0,
+    "readings": {
+      "temperature": 28.84,
+      "pressure": 1017.49,
+      "humidity": 64.3,
+      "light": 160.82
+    },
+    "cluster_name": "NORMAL_NIGHT"
+  },
+  {
+    "timestamp": "2024-02-28 08:00",
+    "notification": "CRIT_MULTI",
+    "severity": "\ud83d\udea8 CRITICAL",
+    "message": "CRITICAL: Multiple sensor variables are simultaneously outside normal bounds. Possible compound environmental fault or sensor array failure. Immediate intervention required.",
+    "anomaly_score": 0.0577,
+    "cluster_id": 0,
+    "readings": {
+      "temperature": 29.02,
+      "pressure": 1018.16,
+      "humidity": 63.07,
+      "light": 185.0
+    },
+    "cluster_name": "NORMAL_NIGHT"
+  },
+  {
+    "timestamp": "2024-02-28 08:30",
+    "notification": "CRIT_MULTI",
+    "severity": "\ud83d\udea8 CRITICAL",
+    "message": "CRITICAL: Multiple sensor variables are simultaneously outside normal bounds. Possible compound environmental fault or sensor array failure. Immediate intervention required.",
+    "anomaly_score": 0.0572,
+    "cluster_id": 5,
+    "readings": {
+      "temperature": 39.89,
+      "pressure": 1017.14,
+      "humidity": 70.42,
+      "light": 245.72
+    },
+    "cluster_name": "NORMAL_NIGHT_2"
+  },
+  {
+    "timestamp": "2024-02-28 09:00",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.0598,
+    "cluster_id": 5,
+    "readings": {
+      "temperature": 32.47,
+      "pressure": 1017.52,
+      "humidity": 58.5,
+      "light": 306.97
+    },
+    "cluster_name": "NORMAL_NIGHT_2"
+  },
+  {
+    "timestamp": "2024-02-28 09:30",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.0653,
+    "cluster_id": 5,
+    "readings": {
+      "temperature": 32.82,
+      "pressure": 1017.99,
+      "humidity": 57.35,
+      "light": 408.67
+    },
+    "cluster_name": "NORMAL_NIGHT_2"
+  },
+  {
+    "timestamp": "2024-02-28 10:00",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.0742,
+    "cluster_id": 5,
+    "readings": {
+      "temperature": 33.6,
+      "pressure": 1017.61,
+      "humidity": 54.89,
+      "light": 539.69
+    },
+    "cluster_name": "NORMAL_NIGHT_2"
+  },
+  {
+    "timestamp": "2024-02-28 10:30",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.0856,
+    "cluster_id": 5,
+    "readings": {
+      "temperature": 34.4,
+      "pressure": 1017.34,
+      "humidity": 53.64,
+      "light": 595.04
+    },
+    "cluster_name": "NORMAL_NIGHT_2"
+  },
+  {
+    "timestamp": "2024-02-28 11:00",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.0998,
+    "cluster_id": 5,
+    "readings": {
+      "temperature": 33.85,
+      "pressure": 1017.25,
+      "humidity": 51.41,
+      "light": 656.8
+    },
+    "cluster_name": "NORMAL_NIGHT_2"
+  },
+  {
+    "timestamp": "2024-02-28 11:30",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.1339,
+    "cluster_id": 7,
+    "readings": {
+      "temperature": 35.08,
+      "pressure": 1016.44,
+      "humidity": 54.75,
+      "light": 845.79
+    },
+    "cluster_name": "NORMAL_DAY_2"
+  },
+  {
+    "timestamp": "2024-02-28 12:00",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.1751,
+    "cluster_id": 7,
+    "readings": {
+      "temperature": 34.73,
+      "pressure": 1017.22,
+      "humidity": 50.63,
+      "light": 864.82
+    },
+    "cluster_name": "NORMAL_DAY_2"
+  },
+  {
+    "timestamp": "2024-02-28 12:30",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.1799,
+    "cluster_id": 7,
+    "readings": {
+      "temperature": 35.02,
+      "pressure": 1017.12,
+      "humidity": 49.86,
+      "light": 951.4
+    },
+    "cluster_name": "NORMAL_DAY_2"
+  },
+  {
+    "timestamp": "2024-02-28 13:00",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.1793,
+    "cluster_id": 7,
+    "readings": {
+      "temperature": 34.2,
+      "pressure": 1017.11,
+      "humidity": 50.42,
+      "light": 990.07
+    },
+    "cluster_name": "NORMAL_DAY_2"
+  },
+  {
+    "timestamp": "2024-02-28 13:30",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.1747,
+    "cluster_id": 7,
+    "readings": {
+      "temperature": 34.55,
+      "pressure": 1017.38,
+      "humidity": 50.15,
+      "light": 1006.82
+    },
+    "cluster_name": "NORMAL_DAY_2"
+  },
+  {
+    "timestamp": "2024-02-28 14:00",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.1692,
+    "cluster_id": 7,
+    "readings": {
+      "temperature": 34.97,
+      "pressure": 1016.95,
+      "humidity": 51.84,
+      "light": 983.32
+    },
+    "cluster_name": "NORMAL_DAY_2"
+  },
+  {
+    "timestamp": "2024-02-28 14:30",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.1582,
+    "cluster_id": 7,
+    "readings": {
+      "temperature": 34.48,
+      "pressure": 1016.84,
+      "humidity": 54.6,
+      "light": 942.85
+    },
+    "cluster_name": "NORMAL_DAY_2"
+  },
+  {
+    "timestamp": "2024-02-28 15:00",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.1458,
+    "cluster_id": 7,
+    "readings": {
+      "temperature": 32.85,
+      "pressure": 1017.05,
+      "humidity": 53.68,
+      "light": 901.11
+    },
+    "cluster_name": "NORMAL_DAY_2"
+  },
+  {
+    "timestamp": "2024-02-28 15:30",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.1279,
+    "cluster_id": 7,
+    "readings": {
+      "temperature": 31.22,
+      "pressure": 1016.79,
+      "humidity": 55.17,
+      "light": 768.84
+    },
+    "cluster_name": "NORMAL_DAY_2"
+  },
+  {
+    "timestamp": "2024-02-28 16:00",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.1108,
+    "cluster_id": 7,
+    "readings": {
+      "temperature": 31.53,
+      "pressure": 1016.55,
+      "humidity": 57.75,
+      "light": 665.63
+    },
+    "cluster_name": "NORMAL_DAY_2"
+  },
+  {
+    "timestamp": "2024-02-28 16:30",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.0978,
+    "cluster_id": 7,
+    "readings": {
+      "temperature": 31.09,
+      "pressure": 1017.06,
+      "humidity": 60.42,
+      "light": 630.8
+    },
+    "cluster_name": "NORMAL_DAY_2"
+  },
+  {
+    "timestamp": "2024-02-28 17:00",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.0877,
+    "cluster_id": 7,
+    "readings": {
+      "temperature": 30.54,
+      "pressure": 1016.95,
+      "humidity": 65.15,
+      "light": 491.36
+    },
+    "cluster_name": "NORMAL_DAY_2"
+  },
+  {
+    "timestamp": "2024-02-28 17:30",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.0798,
+    "cluster_id": 7,
+    "readings": {
+      "temperature": 28.65,
+      "pressure": 1016.75,
+      "humidity": 65.89,
+      "light": 434.38
+    },
+    "cluster_name": "NORMAL_DAY_2"
+  },
+  {
+    "timestamp": "2024-02-28 18:00",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.0805,
+    "cluster_id": 7,
+    "readings": {
+      "temperature": 28.93,
+      "pressure": 1016.44,
+      "humidity": 68.03,
+      "light": 295.24
+    },
+    "cluster_name": "NORMAL_DAY_2"
+  },
+  {
+    "timestamp": "2024-02-28 18:30",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.0817,
+    "cluster_id": 7,
+    "readings": {
+      "temperature": 28.01,
+      "pressure": 1016.27,
+      "humidity": 69.54,
+      "light": 238.95
+    },
+    "cluster_name": "NORMAL_DAY_2"
+  },
+  {
+    "timestamp": "2024-02-28 19:00",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.0851,
+    "cluster_id": 7,
+    "readings": {
+      "temperature": 25.57,
+      "pressure": 1016.07,
+      "humidity": 71.82,
+      "light": 145.3
+    },
+    "cluster_name": "NORMAL_DAY_2"
+  },
+  {
+    "timestamp": "2024-02-28 19:30",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.0886,
+    "cluster_id": 7,
+    "readings": {
+      "temperature": 24.48,
+      "pressure": 1016.8,
+      "humidity": 76.28,
+      "light": 163.11
+    },
+    "cluster_name": "NORMAL_DAY_2"
+  },
+  {
+    "timestamp": "2024-02-28 20:00",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.096,
+    "cluster_id": 7,
+    "readings": {
+      "temperature": 24.47,
+      "pressure": 1016.69,
+      "humidity": 75.0,
+      "light": 58.74
+    },
+    "cluster_name": "NORMAL_DAY_2"
+  },
+  {
+    "timestamp": "2024-02-28 20:30",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.1134,
+    "cluster_id": 1,
+    "readings": {
+      "temperature": 22.54,
+      "pressure": 1015.93,
+      "humidity": 79.55,
+      "light": 52.32
+    },
+    "cluster_name": "NORMAL_DAY"
+  },
+  {
+    "timestamp": "2024-02-28 21:00",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.1369,
+    "cluster_id": 1,
+    "readings": {
+      "temperature": 22.18,
+      "pressure": 1016.0,
+      "humidity": 81.09,
+      "light": 0.65
+    },
+    "cluster_name": "NORMAL_DAY"
+  },
+  {
+    "timestamp": "2024-02-28 21:30",
+    "notification": "WATCH_BORDERLINE",
+    "severity": "\ud83d\udc41\ufe0f  WATCH",
+    "message": "Sensor values are approaching threshold limits. Increased monitoring recommended over the next cycle.",
+    "anomaly_score": 0.1739,
+    "cluster_id": 2,
+    "readings": {
+      "temperature": 20.79,
+      "pressure": 1015.75,
+      "humidity": 83.77,
+      "light": 2.74
+    },
+    "cluster_name": "BORDERLINE"
+  },
+  {
+    "timestamp": "2024-02-28 22:00",
+    "notification": "WATCH_BORDERLINE",
+    "severity": "\ud83d\udc41\ufe0f  WATCH",
+    "message": "Sensor values are approaching threshold limits. Increased monitoring recommended over the next cycle.",
+    "anomaly_score": 0.2098,
+    "cluster_id": 2,
+    "readings": {
+      "temperature": 27.31,
+      "pressure": 1015.49,
+      "humidity": 100.0,
+      "light": 2.85
+    },
+    "cluster_name": "BORDERLINE"
+  },
+  {
+    "timestamp": "2024-02-28 22:30",
+    "notification": "WATCH_BORDERLINE",
+    "severity": "\ud83d\udc41\ufe0f  WATCH",
+    "message": "Sensor values are approaching threshold limits. Increased monitoring recommended over the next cycle.",
+    "anomaly_score": 0.2255,
+    "cluster_id": 2,
+    "readings": {
+      "temperature": 19.59,
+      "pressure": 1015.36,
+      "humidity": 87.09,
+      "light": 3.27
+    },
+    "cluster_name": "BORDERLINE"
+  },
+  {
+    "timestamp": "2024-02-28 23:00",
+    "notification": "WATCH_BORDERLINE",
+    "severity": "\ud83d\udc41\ufe0f  WATCH",
+    "message": "Sensor values are approaching threshold limits. Increased monitoring recommended over the next cycle.",
+    "anomaly_score": 0.1962,
+    "cluster_id": 2,
+    "readings": {
+      "temperature": 20.01,
+      "pressure": 1015.79,
+      "humidity": 88.37,
+      "light": 3.41
+    },
+    "cluster_name": "BORDERLINE"
+  },
+  {
+    "timestamp": "2024-02-28 23:30",
+    "notification": "WATCH_BORDERLINE",
+    "severity": "\ud83d\udc41\ufe0f  WATCH",
+    "message": "Sensor values are approaching threshold limits. Increased monitoring recommended over the next cycle.",
+    "anomaly_score": 0.1129,
+    "cluster_id": 2,
+    "readings": {
+      "temperature": 19.41,
+      "pressure": 1015.79,
+      "humidity": 89.53,
+      "light": 8.21
+    },
+    "cluster_name": "BORDERLINE"
+  },
+  {
+    "timestamp": "2024-02-29 00:00",
+    "notification": "WATCH_BORDERLINE",
+    "severity": "\ud83d\udc41\ufe0f  WATCH",
+    "message": "Sensor values are approaching threshold limits. Increased monitoring recommended over the next cycle.",
+    "anomaly_score": 0.0601,
+    "cluster_id": 2,
+    "readings": {
+      "temperature": 19.25,
+      "pressure": 1015.78,
+      "humidity": 90.03,
+      "light": 6.35
+    },
+    "cluster_name": "BORDERLINE"
+  },
+  {
+    "timestamp": "2024-02-29 00:30",
+    "notification": "WATCH_BORDERLINE",
+    "severity": "\ud83d\udc41\ufe0f  WATCH",
+    "message": "Sensor values are approaching threshold limits. Increased monitoring recommended over the next cycle.",
+    "anomaly_score": 0.0463,
+    "cluster_id": 2,
+    "readings": {
+      "temperature": 26.55,
+      "pressure": 1015.28,
+      "humidity": 70.52,
+      "light": 5.68
+    },
+    "cluster_name": "BORDERLINE"
+  },
+  {
+    "timestamp": "2024-02-29 01:00",
+    "notification": "WATCH_BORDERLINE",
+    "severity": "\ud83d\udc41\ufe0f  WATCH",
+    "message": "Sensor values are approaching threshold limits. Increased monitoring recommended over the next cycle.",
+    "anomaly_score": 0.0467,
+    "cluster_id": 2,
+    "readings": {
+      "temperature": 27.2,
+      "pressure": 1015.66,
+      "humidity": 67.86,
+      "light": 3.05
+    },
+    "cluster_name": "BORDERLINE"
+  },
+  {
+    "timestamp": "2024-02-29 01:30",
+    "notification": "WATCH_BORDERLINE",
+    "severity": "\ud83d\udc41\ufe0f  WATCH",
+    "message": "Sensor values are approaching threshold limits. Increased monitoring recommended over the next cycle.",
+    "anomaly_score": 0.0508,
+    "cluster_id": 2,
+    "readings": {
+      "temperature": 27.07,
+      "pressure": 1015.03,
+      "humidity": 75.07,
+      "light": 6.03
+    },
+    "cluster_name": "BORDERLINE"
+  },
+  {
+    "timestamp": "2024-02-29 02:00",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.0581,
+    "cluster_id": 3,
+    "readings": {
+      "temperature": 26.91,
+      "pressure": 1015.01,
+      "humidity": 69.28,
+      "light": 5.06
+    },
+    "cluster_name": "NORMAL_NIGHT_1"
+  },
+  {
+    "timestamp": "2024-02-29 02:30",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.0692,
+    "cluster_id": 3,
+    "readings": {
+      "temperature": 27.01,
+      "pressure": 1014.94,
+      "humidity": 69.59,
+      "light": 7.69
+    },
+    "cluster_name": "NORMAL_NIGHT_1"
+  },
+  {
+    "timestamp": "2024-02-29 03:00",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.0874,
+    "cluster_id": 3,
+    "readings": {
+      "temperature": 27.65,
+      "pressure": 1015.06,
+      "humidity": 67.99,
+      "light": 6.08
+    },
+    "cluster_name": "NORMAL_NIGHT_1"
+  },
+  {
+    "timestamp": "2024-02-29 03:30",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.1149,
+    "cluster_id": 3,
+    "readings": {
+      "temperature": 27.73,
+      "pressure": 1015.31,
+      "humidity": 71.1,
+      "light": 7.84
+    },
+    "cluster_name": "NORMAL_NIGHT_1"
+  },
+  {
+    "timestamp": "2024-02-29 04:00",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.1506,
+    "cluster_id": 3,
+    "readings": {
+      "temperature": 26.98,
+      "pressure": 1015.0,
+      "humidity": 68.98,
+      "light": 5.58
+    },
+    "cluster_name": "NORMAL_NIGHT_1"
+  },
+  {
+    "timestamp": "2024-02-29 04:30",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.1961,
+    "cluster_id": 0,
+    "readings": {
+      "temperature": 27.62,
+      "pressure": 1014.55,
+      "humidity": 68.71,
+      "light": 5.19
+    },
+    "cluster_name": "NORMAL_NIGHT"
+  },
+  {
+    "timestamp": "2024-02-29 05:00",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.2211,
+    "cluster_id": 0,
+    "readings": {
+      "temperature": 26.85,
+      "pressure": 1014.83,
+      "humidity": 69.32,
+      "light": 8.44
+    },
+    "cluster_name": "NORMAL_NIGHT"
+  },
+  {
+    "timestamp": "2024-02-29 05:30",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.2232,
+    "cluster_id": 0,
+    "readings": {
+      "temperature": 26.32,
+      "pressure": 1014.92,
+      "humidity": 68.85,
+      "light": 1.41
+    },
+    "cluster_name": "NORMAL_NIGHT"
+  },
+  {
+    "timestamp": "2024-02-29 06:00",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.1974,
+    "cluster_id": 0,
+    "readings": {
+      "temperature": 27.08,
+      "pressure": 1014.38,
+      "humidity": 68.34,
+      "light": 1.64
+    },
+    "cluster_name": "NORMAL_NIGHT"
+  },
+  {
+    "timestamp": "2024-02-29 06:30",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.1439,
+    "cluster_id": 0,
+    "readings": {
+      "temperature": 26.96,
+      "pressure": 1014.66,
+      "humidity": 70.88,
+      "light": 67.43
+    },
+    "cluster_name": "NORMAL_NIGHT"
+  },
+  {
+    "timestamp": "2024-02-29 07:00",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.0977,
+    "cluster_id": 0,
+    "readings": {
+      "temperature": 28.25,
+      "pressure": 1014.26,
+      "humidity": 65.24,
+      "light": 53.01
+    },
+    "cluster_name": "NORMAL_NIGHT"
+  },
+  {
+    "timestamp": "2024-02-29 07:30",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.0644,
+    "cluster_id": 0,
+    "readings": {
+      "temperature": 28.93,
+      "pressure": 1014.13,
+      "humidity": 66.1,
+      "light": 158.05
+    },
+    "cluster_name": "NORMAL_NIGHT"
+  },
+  {
+    "timestamp": "2024-02-29 08:00",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.0523,
+    "cluster_id": 0,
+    "readings": {
+      "temperature": 30.33,
+      "pressure": 1014.0,
+      "humidity": 60.28,
+      "light": 198.63
+    },
+    "cluster_name": "NORMAL_NIGHT"
+  },
+  {
+    "timestamp": "2024-02-29 08:30",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.052,
+    "cluster_id": 5,
+    "readings": {
+      "temperature": 31.23,
+      "pressure": 1013.28,
+      "humidity": 58.75,
+      "light": 228.62
+    },
+    "cluster_name": "NORMAL_NIGHT_2"
+  },
+  {
+    "timestamp": "2024-02-29 09:00",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.055,
+    "cluster_id": 5,
+    "readings": {
+      "temperature": 31.9,
+      "pressure": 1013.66,
+      "humidity": 57.77,
+      "light": 318.34
+    },
+    "cluster_name": "NORMAL_NIGHT_2"
+  },
+  {
+    "timestamp": "2024-02-29 09:30",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.061,
+    "cluster_id": 5,
+    "readings": {
+      "temperature": 32.55,
+      "pressure": 1013.59,
+      "humidity": 54.9,
+      "light": 378.7
+    },
+    "cluster_name": "NORMAL_NIGHT_2"
+  },
+  {
+    "timestamp": "2024-02-29 10:00",
+    "notification": "WARN_LIGHT",
+    "severity": "\u26a0\ufe0f  WARNING",
+    "message": "Illuminance reading is outside the expected range. Possible sensor occlusion, flicker, or unexpected lighting change.",
+    "anomaly_score": 0.0707,
+    "cluster_id": 5,
+    "readings": {
+      "temperature": 33.51,
+      "pressure": 1013.89,
+      "humidity": 52.98,
+      "light": 551.95
+    },
+    "cluster_name": "NORMAL_NIGHT_2"
+  },
+  {
+    "timestamp": "2024-02-29 10:30",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.0886,
+    "cluster_id": 5,
+    "readings": {
+      "temperature": 33.74,
+      "pressure": 1014.08,
+      "humidity": 51.72,
+      "light": 1500.0
+    },
+    "cluster_name": "NORMAL_NIGHT_2"
+  },
+  {
+    "timestamp": "2024-02-29 11:00",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.101,
+    "cluster_id": 5,
+    "readings": {
+      "temperature": 34.56,
+      "pressure": 1013.6,
+      "humidity": 51.57,
+      "light": 687.38
+    },
+    "cluster_name": "NORMAL_NIGHT_2"
+  },
+  {
+    "timestamp": "2024-02-29 11:30",
+    "notification": "INFO_NIGHT",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Nighttime environmental conditions confirmed. Low light and temperature within expected overnight range.",
+    "anomaly_score": 0.1205,
+    "cluster_id": 4,
+    "readings": {
+      "temperature": 34.68,
+      "pressure": 1013.28,
+      "humidity": 50.23,
+      "light": 825.99
+    },
+    "cluster_name": "NORMAL_DAY_1"
+  },
+  {
+    "timestamp": "2024-02-29 12:00",
+    "notification": "CRIT_PRESSURE",
+    "severity": "\ud83d\udea8 CRITICAL",
+    "message": "CRITICAL: Atmospheric pressure has dropped sharply below the 2.5\u03c3 lower threshold. Possible weather event or sensor fault. Immediate inspection required.",
+    "anomaly_score": 0.1488,
+    "cluster_id": 4,
+    "readings": {
+      "temperature": 35.0,
+      "pressure": 1013.53,
+      "humidity": 49.82,
+      "light": 872.24
+    },
+    "cluster_name": "NORMAL_DAY_1"
+  },
+  {
+    "timestamp": "2024-02-29 12:30",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.1501,
+    "cluster_id": 4,
+    "readings": {
+      "temperature": 34.4,
+      "pressure": 1013.14,
+      "humidity": 45.02,
+      "light": 928.25
+    },
+    "cluster_name": "NORMAL_DAY_1"
+  },
+  {
+    "timestamp": "2024-02-29 13:00",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.1439,
+    "cluster_id": 4,
+    "readings": {
+      "temperature": 34.87,
+      "pressure": 1013.33,
+      "humidity": 49.77,
+      "light": 996.64
+    },
+    "cluster_name": "NORMAL_DAY_1"
+  },
+  {
+    "timestamp": "2024-02-29 13:30",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.1413,
+    "cluster_id": 4,
+    "readings": {
+      "temperature": 33.61,
+      "pressure": 1013.05,
+      "humidity": 48.16,
+      "light": 963.75
+    },
+    "cluster_name": "NORMAL_DAY_1"
+  },
+  {
+    "timestamp": "2024-02-29 14:00",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.129,
+    "cluster_id": 4,
+    "readings": {
+      "temperature": 34.28,
+      "pressure": 1013.35,
+      "humidity": 52.08,
+      "light": 986.75
+    },
+    "cluster_name": "NORMAL_DAY_1"
+  },
+  {
+    "timestamp": "2024-02-29 14:30",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.1133,
+    "cluster_id": 4,
+    "readings": {
+      "temperature": 33.9,
+      "pressure": 1012.66,
+      "humidity": 51.86,
+      "light": 958.78
+    },
+    "cluster_name": "NORMAL_DAY_1"
+  },
+  {
+    "timestamp": "2024-02-29 15:00",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.0952,
+    "cluster_id": 4,
+    "readings": {
+      "temperature": 32.63,
+      "pressure": 1012.96,
+      "humidity": 53.55,
+      "light": 907.26
+    },
+    "cluster_name": "NORMAL_DAY_1"
+  },
+  {
+    "timestamp": "2024-02-29 15:30",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.0805,
+    "cluster_id": 4,
+    "readings": {
+      "temperature": 33.12,
+      "pressure": 1012.19,
+      "humidity": 54.99,
+      "light": 775.07
+    },
+    "cluster_name": "NORMAL_DAY_1"
+  },
+  {
+    "timestamp": "2024-02-29 16:00",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.0678,
+    "cluster_id": 4,
+    "readings": {
+      "temperature": 30.95,
+      "pressure": 1012.29,
+      "humidity": 61.49,
+      "light": 724.93
+    },
+    "cluster_name": "NORMAL_DAY_1"
+  },
+  {
+    "timestamp": "2024-02-29 16:30",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.0592,
+    "cluster_id": 4,
+    "readings": {
+      "temperature": 31.94,
+      "pressure": 1012.75,
+      "humidity": 58.89,
+      "light": 595.08
+    },
+    "cluster_name": "NORMAL_DAY_1"
+  },
+  {
+    "timestamp": "2024-02-29 17:00",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.0543,
+    "cluster_id": 4,
+    "readings": {
+      "temperature": 30.34,
+      "pressure": 1012.54,
+      "humidity": 61.48,
+      "light": 461.04
+    },
+    "cluster_name": "NORMAL_DAY_1"
+  },
+  {
+    "timestamp": "2024-02-29 17:30",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.0528,
+    "cluster_id": 4,
+    "readings": {
+      "temperature": 30.7,
+      "pressure": 1012.28,
+      "humidity": 64.34,
+      "light": 414.51
+    },
+    "cluster_name": "NORMAL_DAY_1"
+  },
+  {
+    "timestamp": "2024-02-29 18:00",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.0544,
+    "cluster_id": 1,
+    "readings": {
+      "temperature": 27.91,
+      "pressure": 1012.27,
+      "humidity": 69.32,
+      "light": 320.92
+    },
+    "cluster_name": "NORMAL_DAY"
+  },
+  {
+    "timestamp": "2024-02-29 18:30",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.0589,
+    "cluster_id": 1,
+    "readings": {
+      "temperature": 26.41,
+      "pressure": 1012.09,
+      "humidity": 69.3,
+      "light": 292.07
+    },
+    "cluster_name": "NORMAL_DAY"
+  },
+  {
+    "timestamp": "2024-02-29 19:00",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.067,
+    "cluster_id": 1,
+    "readings": {
+      "temperature": 26.53,
+      "pressure": 1012.08,
+      "humidity": 70.69,
+      "light": 149.49
+    },
+    "cluster_name": "NORMAL_DAY"
+  },
+  {
+    "timestamp": "2024-02-29 19:30",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.0748,
+    "cluster_id": 1,
+    "readings": {
+      "temperature": 24.93,
+      "pressure": 1012.06,
+      "humidity": 74.61,
+      "light": 120.93
+    },
+    "cluster_name": "NORMAL_DAY"
+  },
+  {
+    "timestamp": "2024-02-29 20:00",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.0844,
+    "cluster_id": 1,
+    "readings": {
+      "temperature": 23.63,
+      "pressure": 1011.86,
+      "humidity": 74.08,
+      "light": 62.59
+    },
+    "cluster_name": "NORMAL_DAY"
+  },
+  {
+    "timestamp": "2024-02-29 20:30",
+    "notification": "INFO_DAY",
+    "severity": "\u2139\ufe0f  INFO",
+    "message": "Daytime environmental conditions detected. Temperature and light levels are within expected daytime ranges.",
+    "anomaly_score": 0.0993,
+    "cluster_id": 1,
+    "readings": {
+      "temperature": 22.68,
+      "pressure": 1012.14,
+      "humidity": 78.78,
+      "light": 71.14
+    },
+    "cluster_name": "NORMAL_DAY"
+  },
+  {
+    "timestamp": "2024-02-29 21:00",
+    "notification": "CRIT_PRESSURE",
+    "severity": "\ud83d\udea8 CRITICAL",
+    "message": "CRITICAL: Atmospheric pressure has dropped sharply below the 2.5\u03c3 lower threshold. Possible weather event or sensor fault. Immediate inspection required.",
+    "anomaly_score": 0.1215,
+    "cluster_id": 2,
+    "readings": {
+      "temperature": 22.24,
+      "pressure": 1012.08,
+      "humidity": 84.07,
+      "light": 4.88
+    },
+    "cluster_name": "BORDERLINE"
+  }
+]
