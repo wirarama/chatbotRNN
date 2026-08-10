@@ -1,0 +1,49 @@
+{
+  "days": 60,
+  "interval_min": 30,
+  "seq_len": 24,
+  "pred_len": 6,
+  "hidden": 128,
+  "n_layers": 2,
+  "dropout": 0.2,
+  "n_clusters": 8,
+  "n_features": 34,
+  "n_windows": 2851,
+  "n_sensors": 4,
+  "sensor_keys": [
+    "temperature",
+    "pressure",
+    "humidity",
+    "light"
+  ],
+  "sensor_units": {
+    "temperature": "\u00b0C",
+    "pressure": "hPa",
+    "humidity": "% RH",
+    "light": "lux"
+  },
+  "notif_classes": [
+    "NO_ACTION",
+    "INFO_DAY",
+    "INFO_NIGHT",
+    "WATCH_BORDERLINE",
+    "WARN_TEMP",
+    "WARN_HUMIDITY",
+    "WARN_LIGHT",
+    "CRIT_PRESSURE",
+    "CRIT_MULTI"
+  ],
+  "cluster_names": {
+    "0": "Warm Day",
+    "1": "Humid Day",
+    "2": "Humid Day 1",
+    "3": "Warm Night",
+    "4": "Hot Afternoon",
+    "5": "Hot Afternoon 1",
+    "6": "Humid Day 2",
+    "7": "Sunny Day"
+  },
+  "ref_date": "2024-02-29",
+  "seed": 42,
+  "trained_at": "2026-08-09T15:36:38"
+}
