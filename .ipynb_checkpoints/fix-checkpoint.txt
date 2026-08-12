@@ -1,0 +1,6 @@
+#fixer
+st.plotly_chart(
+    training_chart(hist),
+    use_container_width=True,
+    key="training_chart"
+)
