@@ -44,47 +44,238 @@ warnings.filterwarnings("ignore")
 # ─────────────────────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="IoT-SLM Chatbot",
-    page_icon="🌡️",
+    page_icon=None,
     layout="wide",
     initial_sidebar_state="expanded",
 )
 
 st.markdown("""
 <style>
-html,body,[class*="css"]{font-family:'Inter',sans-serif;}
-.block-container{padding-top:1.1rem;padding-bottom:0.8rem;}
-.header-bar{background:linear-gradient(135deg,#0E2A5C,#1A5276 60%,#0D7A6E);
-  border-radius:12px;padding:14px 22px;margin-bottom:14px;display:flex;align-items:center;gap:14px;}
-.header-bar h1{color:#fff;font-size:1.4rem;margin:0;font-weight:700;}
-.header-bar p{color:#A8D8EA;font-size:0.80rem;margin:3px 0 0;}
-.user-msg{background:#1A5276;color:#fff;border-radius:16px 16px 4px 16px;
-  padding:9px 14px;margin:5px 0 5px 20%;font-size:0.88rem;line-height:1.5;}
-.bot-msg{background:#F0F4FF;color:#0E2A5C;border-radius:16px 16px 16px 4px;
-  border-left:4px solid #0D7A6E;padding:11px 16px;margin:5px 18% 5px 0;
-  font-size:0.87rem;line-height:1.6;white-space:pre-wrap;}
-.bot-msg b{color:#0D7A6E;}
-.stat-card{background:#EEF3FA;border:1px solid #C8D8F0;border-radius:10px;
-  padding:12px 10px;text-align:center;margin-bottom:6px;}
-.stat-val{font-size:1.45rem;font-weight:700;color:#1A5276;}
-.stat-lbl{font-size:0.75rem;color:#5A6E8C;margin-top:3px;}
-.stat-trend-up{font-size:0.76rem;color:#C0392B;}
-.stat-trend-dn{font-size:0.76rem;color:#1D8348;}
-.stat-trend-st{font-size:0.76rem;color:#888;}
-.nbadge{display:inline-block;padding:3px 10px;border-radius:16px;font-size:0.78rem;font-weight:600;}
-.NOMINAL {background:#D5F5E3;color:#1D8348;}
-.INFO    {background:#D6EAF8;color:#1A5276;}
-.WATCH   {background:#FEF9E7;color:#B7770D;}
-.WARNING {background:#FDEBD0;color:#BA4A00;}
-.CRITICAL{background:#FADBD8;color:#922B21;}
-.stButton>button{width:100%;border-radius:8px;font-size:0.82rem;
-  border:1px solid #C8D8F0;background:#F0F4FF;color:#1A5276;padding:5px 8px;}
-.stButton>button:hover{background:#1A5276;color:#fff;}
-section[data-testid="stSidebar"]{background:#0E2A5C;}
-section[data-testid="stSidebar"] *{color:#EEF3FA !important;}
-.model-ok{background:#D5F5E3;border-radius:8px;padding:6px 12px;
-  font-size:0.80rem;color:#1D8348;margin-bottom:6px;}
-.model-err{background:#FADBD8;border-radius:8px;padding:6px 12px;
-  font-size:0.80rem;color:#922B21;margin-bottom:6px;}
+/* ── Bootstrap-aligned base — forced white theme, high-contrast text ── */
+html, body, [class*="css"], [class*="st-"] {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 15px;
+    color: #212529 !important;
+}
+.stApp, [data-testid="stAppViewContainer"], [data-testid="stHeader"],
+.main, .block-container {
+    background-color: #ffffff !important;
+    color: #212529 !important;
+}
+[data-testid="stHeader"] { background-color: rgba(255,255,255,0) !important; }
+.block-container {
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
+    max-width: 1400px;
+}
+
+/* Headings / plain markdown text / captions */
+h1, h2, h3, h4, h5, h6,
+[data-testid="stMarkdownContainer"], [data-testid="stMarkdownContainer"] p,
+[data-testid="stMarkdownContainer"] li, [data-testid="stCaptionContainer"],
+label, .stMarkdown, .stText, [data-testid="stMetricLabel"],
+[data-testid="stMetricValue"] {
+    color: #212529 !important;
+}
+[data-testid="stMarkdownContainer"] a { color: #0d6efd !important; }
+
+/* Tabs */
+[data-testid="stTabs"] button[role="tab"] { color: #495057 !important; }
+[data-testid="stTabs"] button[role="tab"][aria-selected="true"] {
+    color: #0d6efd !important;
+    border-bottom-color: #0d6efd !important;
+}
+[data-testid="stTabs"] [data-baseweb="tab-highlight"] { background-color: #0d6efd !important; }
+[data-testid="stTabs"] [data-baseweb="tab-border"] { background-color: #dee2e6 !important; }
+
+/* Selectboxes / dropdowns / inputs */
+[data-baseweb="select"] > div, .stSelectbox div[data-baseweb="select"] {
+    background-color: #ffffff !important;
+    color: #212529 !important;
+    border-color: #ced4da !important;
+}
+[data-baseweb="popover"] li, [data-baseweb="menu"] li {
+    background-color: #ffffff !important;
+    color: #212529 !important;
+}
+input, textarea {
+    background-color: #ffffff !important;
+    color: #212529 !important;
+}
+[data-testid="stChatInput"] textarea {
+    background-color: #ffffff !important;
+    color: #212529 !important;
+}
+
+/* Dataframes / tables */
+[data-testid="stDataFrame"], [data-testid="stTable"] {
+    color: #212529 !important;
+    background-color: #ffffff !important;
+}
+[data-testid="stDataFrame"] * { color: #212529 !important; }
+
+/* Expanders */
+[data-testid="stExpander"] summary {
+    color: #212529 !important;
+    background-color: #f8f9fa !important;
+}
+
+/* Alerts (st.info / st.success / st.warning / st.error) keep their own
+   accessible foreground/background pairs — just make sure text isn't
+   overridden to something invisible. */
+[data-testid="stAlert"] p, [data-testid="stAlertContentInfo"],
+[data-testid="stAlertContentSuccess"], [data-testid="stAlertContentWarning"],
+[data-testid="stAlertContentError"] {
+    color: inherit !important;
+}
+
+/* Code blocks */
+code, pre, [data-testid="stCodeBlock"] {
+    color: #212529 !important;
+    background-color: #f1f3f5 !important;
+}
+
+/* ── Page header (navbar style) ── */
+.iot-navbar {
+    background-color: #343a40;
+    color: #fff;
+    padding: 0.65rem 1.25rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    border-left: 4px solid #0d6efd;
+}
+.iot-navbar .brand {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff !important;
+    letter-spacing: 0.02em;
+}
+.iot-navbar .meta {
+    font-size: 0.82rem;
+    color: #ced4da !important;
+}
+
+/* ── Chat bubbles ── */
+.msg-user {
+    background-color: #0d6efd;
+    color: #fff;
+    border-radius: 4px 4px 0 4px;
+    padding: 0.55rem 0.9rem;
+    margin: 0.35rem 0 0.35rem 22%;
+    font-size: 0.93rem;
+    line-height: 1.55;
+}
+.msg-bot {
+    background-color: #fff;
+    color: #212529;
+    border-radius: 0 4px 4px 4px;
+    border: 1px solid #dee2e6;
+    border-left: 3px solid #0d6efd;
+    padding: 0.65rem 0.95rem;
+    margin: 0.35rem 18% 0.35rem 0;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    white-space: pre-wrap;
+}
+.msg-bot b { color: #0d6efd; }
+.msg-bot i { color: #495057; }
+
+/* ── Stat cards ── */
+.stat-card {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 0.9rem 0.75rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+.stat-val {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #212529;
+    line-height: 1.2;
+}
+.stat-unit {
+    font-size: 0.78rem;
+    color: #6c757d;
+    font-weight: 400;
+}
+.stat-lbl {
+    font-size: 0.78rem;
+    color: #6c757d;
+    margin-top: 0.25rem;
+}
+.stat-sub {
+    font-size: 0.75rem;
+    color: #868e96;
+    margin-top: 0.15rem;
+}
+.trend-up   { font-size: 0.75rem; color: #dc3545; font-weight: 600; }
+.trend-dn   { font-size: 0.75rem; color: #198754; font-weight: 600; }
+.trend-st   { font-size: 0.75rem; color: #6c757d; }
+
+/* ── Notification badge ── */
+.nbadge {
+    display: inline-block;
+    padding: 0.25rem 0.65rem;
+    border-radius: 3px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+.NOMINAL  { background: #d1e7dd; color: #0a3622; border: 1px solid #a3cfbb; }
+.INFO     { background: #cfe2ff; color: #052c65; border: 1px solid #9ec5fe; }
+.WATCH    { background: #fff3cd; color: #664d03; border: 1px solid #ffda6a; }
+.WARNING  { background: #ffe5d0; color: #6e2d00; border: 1px solid #ffbd9b; }
+.CRITICAL { background: #f8d7da; color: #58151c; border: 1px solid #f1aeb5; }
+
+/* ── Sidebar (white theme) ── */
+section[data-testid="stSidebar"] {
+    background-color: #f8f9fa !important;
+    border-right: 1px solid #dee2e6;
+}
+section[data-testid="stSidebar"] * {
+    color: #212529 !important;
+}
+section[data-testid="stSidebar"] hr {
+    border-color: #dee2e6 !important;
+}
+section[data-testid="stSidebar"] [data-baseweb="select"] > div {
+    background-color: #ffffff !important;
+    color: #212529 !important;
+    border-color: #ced4da !important;
+}
+
+/* ── Buttons ── */
+.stButton > button {
+    width: 100%;
+    border-radius: 3px;
+    font-size: 0.84rem;
+    font-family: "Segoe UI", Arial, sans-serif;
+    border: 1px solid #0d6efd;
+    background: #0d6efd;
+    color: #fff !important;
+    padding: 0.3rem 0.6rem;
+    text-align: left;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+.stButton > button:hover {
+    background: #0b5ed7;
+    border-color: #0b5ed7;
+    color: #fff !important;
+}
+.stButton > button p { color: #fff !important; }
+
+/* ── Info / success boxes ── */
+.status-ok  { background:#d1e7dd; border:1px solid #a3cfbb; border-radius:3px;
+              padding:0.3rem 0.7rem; font-size:0.82rem; color:#0a3622; margin:2px 0; }
+.status-err { background:#f8d7da; border:1px solid #f1aeb5; border-radius:3px;
+              padding:0.3rem 0.7rem; font-size:0.82rem; color:#58151c; margin:2px 0; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -116,12 +307,12 @@ NOTIF_MSG = {
     "NO_ACTION":        "All readings within normal operating range.",
     "INFO_DAY":         "Daytime conditions within expected parameters.",
     "INFO_NIGHT":       "Nighttime conditions within expected parameters.",
-    "WATCH_BORDERLINE": "⚠ Values approaching threshold limits — monitor closely.",
-    "WARN_TEMP":        "⚠ Temperature exceeded upper bound. Check ventilation.",
-    "WARN_HUMIDITY":    "⚠ Humidity elevated. Inspect for condensation or seal failure.",
-    "WARN_LIGHT":       "⚠ Illuminance outside expected range. Check sensor.",
-    "CRIT_PRESSURE":    "🚨 CRITICAL: Pressure dropped sharply. Immediate inspection required.",
-    "CRIT_MULTI":       "🚨 CRITICAL: Multiple sensors abnormal. Immediate action required.",
+    "WATCH_BORDERLINE": "Values approaching threshold limits — increased monitoring recommended.",
+    "WARN_TEMP":        "WARNING: Temperature exceeded upper bound. Check ventilation or cooling systems.",
+    "WARN_HUMIDITY":    "WARNING: Humidity elevated. Inspect for condensation or seal failure.",
+    "WARN_LIGHT":       "WARNING: Illuminance outside expected range. Check sensor integrity.",
+    "CRIT_PRESSURE":    "CRITICAL: Pressure dropped sharply. Immediate inspection required.",
+    "CRIT_MULTI":       "CRITICAL: Multiple sensors simultaneously abnormal. Immediate action required.",
 }
 CLUSTER_COND = {
     "Cool Night":"comfortable nighttime conditions",
@@ -764,7 +955,7 @@ if TORCH_OK:
 # ─────────────────────────────────────────────────────────────────────────────
 #  MODEL LOADING
 # ─────────────────────────────────────────────────────────────────────────────
-@st.cache_resource(show_spinner="📂 Loading pre-trained models from disk...")
+@st.cache_resource(show_spinner="Loading pre-trained models from disk...")
 def load_models(model_dir):
     """
     Load all saved artifacts from iot_train.py output directory.
@@ -1245,15 +1436,17 @@ def stat_cards(result):
     for k, col in zip(SENSOR_KEYS, cols):
         s = ss[k]; u = SENSOR_UNITS[k]
         tr = s["trend"]
-        if abs(tr) < 0.001: tc, ta = "stat-trend-st", "→ stable"
-        elif tr > 0:         tc, ta = "stat-trend-up", f"↑ +{abs(tr):.3f}/step"
-        else:                tc, ta = "stat-trend-dn", f"↓ -{abs(tr):.3f}/step"
+        if abs(tr) < 0.001:  tc, ta = "trend-st", "stable"
+        elif tr > 0.05:      tc, ta = "trend-up", f"rising sharply ({tr:+.3f}/step)"
+        elif tr > 0:         tc, ta = "trend-up", f"rising ({tr:+.3f}/step)"
+        elif tr < -0.05:     tc, ta = "trend-dn", f"dropping sharply ({tr:+.3f}/step)"
+        else:                tc, ta = "trend-dn", f"falling ({tr:+.3f}/step)"
         col.markdown(f"""
         <div class="stat-card">
-          <div class="stat-val">{s['mean']:.1f}<small style="font-size:.75rem"> {u}</small></div>
-          <div class="stat-lbl">{k.capitalize()} — Mean</div>
-          <div class="stat-lbl">Median {s['median']:.1f} · IQR {s['iqr']:.1f}</div>
-          <div class="stat-lbl">Min {s['min']:.1f} · Max {s['max']:.1f}</div>
+          <div class="stat-val">{s['mean']:.1f} <span class="stat-unit">{u}</span></div>
+          <div class="stat-lbl"><strong>{k.capitalize()}</strong> — Mean</div>
+          <div class="stat-sub">Median {s['median']:.1f} &nbsp;|&nbsp; IQR {s['iqr']:.1f}</div>
+          <div class="stat-sub">Min {s['min']:.1f} &nbsp;|&nbsp; Max {s['max']:.1f}</div>
           <div class="{tc}">{ta}</div>
         </div>""", unsafe_allow_html=True)
 
@@ -1261,11 +1454,13 @@ def stat_cards(result):
 def notif_badge(result):
     n   = result["notification"]
     sev = SEVERITY_MAP.get(n, "INFO")
+    msg = NOTIF_MSG.get(n, "")
     st.markdown(
-        f'<span class="nbadge {sev}">{sev}</span> '
-        f'<span style="font-size:.85rem;margin-left:6px">{n}</span>',
+        f'<div style="margin:0.5rem 0">' 
+        f'<span class="nbadge {sev}">{sev}</span> ' 
+        f'<span style="font-size:0.87rem;color:#212529;margin-left:0.5rem">{n}</span>' 
+        f'<br><span style="font-size:0.82rem;color:#6c757d">{msg}</span></div>',
         unsafe_allow_html=True)
-    st.caption(NOTIF_MSG.get(n, ""))
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -1321,42 +1516,48 @@ def main():
 
     # ── Header ────────────────────────────────────────────────────────────
     st.markdown(f"""
-    <div class="header-bar">
-      <div style="font-size:26px">🌡️</div>
-      <div>
-        <h1>IoT-SLM Environmental Chatbot</h1>
-        <p>Pre-trained models loaded from <b>{MODEL_DIR}</b>  ·
-           GRU-RNN · K-Means · Decision Tree  ·
-           Ref date <b>{ref_date}</b>  ·
-           {cfg.get('n_windows',0):,} windows</p>
-      </div>
+    <div class="iot-navbar">
+      <span class="brand">IoT-SLM Environmental Chatbot</span>
+      <span class="meta">
+        Models: {MODEL_DIR} &nbsp;|&nbsp;
+        GRU-RNN · K-Means · Decision Tree &nbsp;|&nbsp;
+        Ref date: {ref_date} &nbsp;|&nbsp;
+        {cfg.get('n_windows',0):,} windows
+      </span>
     </div>""", unsafe_allow_html=True)
 
     # ── Sidebar ───────────────────────────────────────────────────────────
     with st.sidebar:
-        st.markdown("## ⚙️ Model Status")
+        st.markdown("#### Model Status")
         for k, v in load_report.items():
-            icon = "✅" if v == "✓" else "⚠️"
-            st.markdown(f"{icon} **{k}**: {v}")
+            css_cls = "status-ok" if v == "✓" else "status-err"
+            label   = "OK" if v == "✓" else v
+            st.markdown(
+                f'<div class="{css_cls}">{k}: {label}</div>',
+                unsafe_allow_html=True)
 
         st.markdown("---")
-        st.markdown("## 📊 Metrics (Validation)")
+        st.markdown("#### Validation Metrics")
         for sensor, m in eval_metrics.items():
-            st.markdown(f"**{sensor.capitalize()}**  "
-                        f"R²={m['r2']}  MAE={m['mae']}")
+            st.markdown(f"**{sensor.capitalize()}** &nbsp; "
+                        f"R² {m['r2']} &nbsp; MAE {m['mae']}",
+                        unsafe_allow_html=True)
 
         st.markdown("---")
-        st.markdown("## 📋 Quick Queries")
-        quick = ["today", "yesterday", "this week", "last week",
-                 "this month", "last month",
-                 "compare today and yesterday",
-                 "compare this week and last week"]
+        st.markdown("#### Quick Queries")
+        quick = [
+            "today", "yesterday", "this week", "last week",
+            "this month", "last month",
+            "compare today and yesterday",
+            "compare this week and last week",
+            "clusters",
+        ]
         for qq in quick:
             if st.button(qq.title(), key=f"qq_{qq}"):
                 st.session_state._pending = qq
 
         st.markdown("---")
-        st.markdown("## 🌐 Query Language")
+        st.markdown("#### Query Language")
         st.markdown("""
 | English | Indonesian |
 |---|---|
@@ -1366,40 +1567,43 @@ def main():
 | last week | minggu lalu |
 | this month | bulan ini |
 | last month | bulan lalu |
+| clusters | cluster apa saja |
+| Hot Afternoon | (cluster name) |
         """)
 
         st.markdown("---")
-        st.markdown(f"## 📁 Model Directory\n`{MODEL_DIR}`")
-        st.markdown(f"**Trained at:** {cfg.get('trained_at','?')}")
-        st.markdown(f"**Days:** {cfg.get('days')}  ·  "
-                    f"**Interval:** {cfg.get('interval_min')} min")
-        st.markdown(f"**Epochs:** {cfg.get('epochs',60) if 'epochs' in cfg else '—'}")
+        st.markdown(f"**Model directory**  \n`{MODEL_DIR}`")
+        st.markdown(f"Trained: {cfg.get('trained_at','?')[:19]}")
+        st.markdown(f"Days: {cfg.get('days')} &nbsp; Interval: {cfg.get('interval_min')} min",
+                    unsafe_allow_html=True)
 
     # ── Layout ────────────────────────────────────────────────────────────
     col_chat, col_vis = st.columns([1, 1.4], gap="medium")
 
     # ══ Chat ════════════════════════════════════════════════════════════
     with col_chat:
-        st.markdown("### 💬 Chat")
+        st.markdown("#### Conversation")
         chat_box = st.container(height=440)
         with chat_box:
             if not st.session_state.messages:
-                st.markdown("""<div class="bot-msg">
-👋 Hi! I'm your <b>IoT-SLM Environmental Assistant</b>.<br>
-All models are pre-loaded from disk — no training on startup!<br><br>
-Ask me about sensor conditions using time expressions:<br>
-<i>"today"</i>, <i>"this week"</i>, <i>"compare today and yesterday"</i>.<br>
-Indonesian phrases also work: <i>"hari ini"</i>, <i>"minggu ini"</i>.
+                st.markdown("""<div class="msg-bot">
+<b>IoT-SLM Assistant</b><br>
+Models loaded from disk. Ready for queries.<br><br>
+Supported query types:<br>
+<b>Temporal:</b> today, this week, compare today and yesterday<br>
+<b>Ranking:</b> highest temperature this week<br>
+<b>Rate:</b> fastest temperature increase this month<br>
+<b>Clusters:</b> clusters, Hot Afternoon, Warm Day
 </div>""", unsafe_allow_html=True)
             for msg in st.session_state.messages:
-                css = "user-msg" if msg["role"] == "user" else "bot-msg"
-                icon = "👤" if msg["role"] == "user" else "🤖"
+                css = "msg-user" if msg["role"] == "user" else "msg-bot"
+                prefix = "You: " if msg["role"] == "user" else ""
                 st.markdown(
-                    f'<div class="{css}">{icon} {msg["content"]}</div>',
+                    f'<div class="{css}">{prefix}{msg["content"]}</div>',
                     unsafe_allow_html=True)
 
         # Input
-        user_input = st.chat_input("Ask about sensor conditions...")
+        user_input = st.chat_input("Enter a query, e.g.: today / highest temperature this week / clusters")
         if hasattr(st.session_state, "_pending"):
             user_input = st.session_state._pending
             del st.session_state._pending
@@ -1442,20 +1646,21 @@ Indonesian phrases also work: <i>"hari ini"</i>, <i>"minggu ini"</i>.
             elif (lambda s,d,p: s is not None)(
                     *parser.parse_ranking(user_input)):
                 sensor, direction, r_periods = parser.parse_ranking(user_input)
-            direction = None
-            sensor = None
-            r_periods = None
-            if sensor and direction and r_periods:
-                s, e, lbl = r_periods[0]
-                base = engine.query(s, e, lbl)
-                if base:
-                    rk = ranking_query(engine, base["indices"],
-                                       sensor, direction, lbl, top_n=5)
-                    reply   = rk["narrative"] if rk else "No data found."
-                    results = [base]
+                if r_periods:
+                    s, e, lbl = r_periods[0]
+                    base = engine.query(s, e, lbl)
+                    if base:
+                        rk = ranking_query(engine, base["indices"],
+                                           sensor, direction, lbl, top_n=5)
+                        reply   = rk["narrative"] if rk else "No data found."
+                        results = [base]
+                    else:
+                        reply   = "No data found for the requested period."
+                        results = []
                 else:
-                    reply   = "No data found for the requested period."
-                    results = []
+                    reply = ("Please specify a time period. Example: "
+                             "**highest temperature this week**, "
+                             "**lowest humidity last month**."); results = []
 
             else:
                 # ── 3. Standard temporal query ────────────────────────────
@@ -1494,40 +1699,41 @@ Indonesian phrases also work: <i>"hari ini"</i>, <i>"minggu ini"</i>.
 
     # ══ Visualisation ════════════════════════════════════════════════════
     with col_vis:
-        st.markdown("### 📈 Sensor Visualisation")
+        st.markdown("#### Sensor Analysis")
         t1, t2, t3, t4 = st.tabs(
-            ["📊 Charts", "🧩 Stat Cards", "📋 Data Tables", "🔬 Model Info"])
+            ["Charts", "Statistics", "Data Tables", "Model Info"])
 
         # Charts
         with t1:
             if st.session_state.last_results:
                 fig = make_charts(engine, st.session_state.last_results)
                 st.plotly_chart(fig, use_container_width=True,
-                                config={"displayModeBar": True})
+                                config={"displayModeBar": True},
+                                key="chart_main")
                 for res in st.session_state.last_results:
                     notif_badge(res)
             else:
-                st.info("💡 Ask a question in the chat to see charts.")
+                st.info("Submit a query in the chat panel to generate charts.")
                 st.plotly_chart(training_chart(hist),
-                                use_container_width=True,key="training_chart")
+                                use_container_width=True,
+                                key="training_chart_tab1")
 
         # Stat Cards
         with t2:
             if st.session_state.last_results:
                 for res in st.session_state.last_results:
-                    st.markdown(f"#### {res['label']} "
-                                f"({res['start']} → {res['end']})")
+                    st.markdown(f"**{res['label']}** &nbsp; {res['start']} to {res['end']}", unsafe_allow_html=True)
                     stat_cards(res)
                     notif_badge(res)
                     st.markdown("---")
             else:
-                st.info("Ask a question to see sensor statistics.")
+                st.info("Submit a query in the chat panel to see statistics.")
 
         # Data Tables
         with t3:
             if st.session_state.last_results:
                 for res in st.session_state.last_results:
-                    st.markdown(f"#### {res['label']}")
+                    st.markdown(f"**{res['label']}**")
                     sensor_t = st.selectbox(
                         "Sensor for hourly table", SENSOR_KEYS,
                         key=f"sel_{res['label']}",
@@ -1535,7 +1741,8 @@ Indonesian phrases also work: <i>"hari ini"</i>, <i>"minggu ini"</i>.
                     df = hourly_table(engine, res, sensor_t)
                     if df is not None:
                         st.dataframe(df, use_container_width=True,
-                                     height=300, hide_index=True)
+                                     height=300, hide_index=True,
+                                     key=f"hourly_df_{res['label']}_{sensor_t}")
                     # Full stats with median + IQR
                     ss = res["stats"]
                     sumdf = pd.DataFrame([
@@ -1551,18 +1758,20 @@ Indonesian phrases also work: <i>"hari ini"</i>, <i>"minggu ini"</i>.
                         for k in SENSOR_KEYS])
                     st.markdown("**Overall Statistics**")
                     st.dataframe(sumdf, use_container_width=True,
-                                 hide_index=True)
+                                 hide_index=True,
+                                 key=f"sumdf_{res['label']}")
                     st.markdown("---")
             else:
-                st.info("Ask a question to see data tables.")
+                st.info("Submit a query in the chat panel to see data tables.")
 
         # Model Info
         with t4:
-            st.markdown("#### Training Convergence")
+            st.markdown("**Training Convergence**")
             st.plotly_chart(training_chart(hist),
-                            use_container_width=True)
+                            use_container_width=True,
+                            key="training_chart_tab4")
 
-            st.markdown("#### Forecasting Metrics (Validation Set)")
+            st.markdown("**Forecasting Metrics (Validation Set)**")
             mdf = pd.DataFrame([
                 {"Sensor":    sensor.capitalize(),
                  "MAE":       m["mae"],
@@ -1570,9 +1779,10 @@ Indonesian phrases also work: <i>"hari ini"</i>, <i>"minggu ini"</i>.
                  "R²":        m["r2"]}
                 for sensor, m in eval_metrics.items()
             ])
-            st.dataframe(mdf, use_container_width=True, hide_index=True)
+            st.dataframe(mdf, use_container_width=True, hide_index=True,
+                        key="mdf_metrics")
 
-            st.markdown("#### K-Means Cluster Summary")
+            st.markdown("**K-Means Cluster Summary**")
             cl_arr = engine.cl
             cnt    = Counter(cl_arr.tolist())
             cldf   = pd.DataFrame([
@@ -1580,9 +1790,10 @@ Indonesian phrases also work: <i>"hari ini"</i>, <i>"minggu ini"</i>.
                  "Windows": cnt.get(k, 0)}
                 for k in sorted(engine.cn.keys())
             ])
-            st.dataframe(cldf, use_container_width=True, hide_index=True)
+            st.dataframe(cldf, use_container_width=True, hide_index=True,
+                        key="cldf_clusters")
 
-            st.markdown("#### GRU-RNN Architecture")
+            st.markdown("**GRU-RNN Architecture**")
             arch = pd.DataFrame([
                 {"Layer":"Input Projection","In":"(B,24,4)","Out":"(B,24,128)","Params":"640"},
                 {"Layer":"GRU Layer 1","In":"(B,24,128)","Out":"(B,24,128)","Params":"99,072"},
@@ -1592,12 +1803,13 @@ Indonesian phrases also work: <i>"hari ini"</i>, <i>"minggu ini"</i>.
                 {"Layer":"Anomaly Head","In":"(B,128)","Out":"(B,1)","Params":"2,114"},
                 {"Layer":"Total","In":"—","Out":"—","Params":"262,553"},
             ])
-            st.dataframe(arch, use_container_width=True, hide_index=True)
+            st.dataframe(arch, use_container_width=True, hide_index=True,
+                        key="arch_table")
 
-            st.markdown("#### Model Load Report")
+            st.markdown("**Model Load Report**")
             for k, v in load_report.items():
-                icon = "✅" if v == "✓" else "⚠️"
-                st.markdown(f"{icon} `{k}`: {v}")
+                status = "OK" if v == "✓" else v
+                st.markdown(f"`{k}`: {status}")
 
             st.markdown(f"#### Config\n```json\n"
                         + json.dumps(cfg, indent=2, default=str)
