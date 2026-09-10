@@ -1,0 +1,77 @@
+[
+  {
+    "id": "3158bbe8",
+    "raw_text": "buat rule jika suhu diatas 32°C dan humidity diatas 70% maka notif saya.",
+    "conditions": [
+      {
+        "sensor": "temperature",
+        "mode": "level",
+        "op": "above",
+        "value": 32.0
+      },
+      {
+        "sensor": "humidity",
+        "mode": "level",
+        "op": "above",
+        "value": 70.0
+      }
+    ],
+    "logic": "and",
+    "enabled": true,
+    "created_at": "2026-09-10T10:50:00",
+    "last_state": false,
+    "last_triggered_at": null,
+    "trigger_count": 0,
+    "description": "Temperature > 32°C AND Humidity > 70% RH"
+  },
+  {
+    "id": "44ca2abc",
+    "raw_text": "buat rule Jika peningkatan suhu diatas 2 dan pressure diatas 10",
+    "conditions": [
+      {
+        "sensor": "temperature",
+        "mode": "increase",
+        "op": "above",
+        "value": 2.0
+      },
+      {
+        "sensor": "pressure",
+        "mode": "level",
+        "op": "above",
+        "value": 10.0
+      }
+    ],
+    "logic": "and",
+    "enabled": true,
+    "created_at": "2026-09-10T11:03:19",
+    "last_state": false,
+    "last_triggered_at": "2026-09-10T12:44:55",
+    "trigger_count": 5,
+    "description": "Temperature rises more than 2°C within 60 min AND Pressure > 10hPa"
+  },
+  {
+    "id": "348adf98",
+    "raw_text": "buat rule Jika peningkatan suhu diatas 5 dan pressure dibawah 100",
+    "conditions": [
+      {
+        "sensor": "temperature",
+        "mode": "increase",
+        "op": "above",
+        "value": 5.0
+      },
+      {
+        "sensor": "pressure",
+        "mode": "level",
+        "op": "below",
+        "value": 100.0
+      }
+    ],
+    "logic": "and",
+    "enabled": true,
+    "created_at": "2026-09-10T11:04:15",
+    "last_state": false,
+    "last_triggered_at": null,
+    "trigger_count": 0,
+    "description": "Temperature rises more than 5°C within 60 min AND Pressure < 100hPa"
+  }
+]
